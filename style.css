@@ -1,0 +1,126 @@
+body {
+  margin: 0;
+  font-size: 62px;
+  color: white;
+}
+
+.wrapper {
+  background: black;
+  min-height: 80vh;
+  padding: 16px;
+
+  /*grid system */
+  display: grid;
+  gap: 10px;
+  /*grid-template-columns: 1fr 1fr 1fr;*/
+
+  grid-template-areas:
+    "item8 item2 item7"
+    "item5 item5 item6"
+    "item3 item1 item6"
+    "item4 item4 item9";
+}
+
+.wrapper > div {
+  background: grey;
+
+  /*grid system*/
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.item-1 {
+  grid-area: item1;
+}
+
+.item-2 {
+  grid-area: item2;
+}
+
+.item-3 {
+  grid-area: item3;
+}
+
+.item-4 {
+  grid-area: item4;
+}
+
+.item-5 {
+  grid-area: item5;
+}
+
+.item-6 {
+  grid-area: item6;
+}
+
+.item-7 {
+  grid-area: item7;
+}
+
+.item-8 {
+  grid-area: item8;
+}
+
+.item-9 {
+  grid-area: item9;
+}
+
+h3 {
+  font-size: 30px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: black;
+  margin: auto;
+  margin-top: 50px;
+  display: none;
+}
+
+/*media query*/
+@media (max-width: 768px) {
+  .wrapper {
+    display: grid;
+    gap: 10px;
+
+    grid-template-areas:
+      "item8 item2 item7"
+      "item5 item5 item6"
+      "item3 item1 item6"
+      "item4 item4 item9";
+  }
+
+  .circle {
+    display: block;
+  }
+}
+
+/*media query 576px*/
+
+@media (max-width: 576px) {
+  .wrapper {
+    display: grid;
+    gap: 10px;
+
+    grid-template-areas:
+      "item1"
+      "item2"
+      "item3"
+      "item4"
+      "item5"
+      "item6"
+      "item7"
+      "item8"
+      "item9";
+  }
+
+  .circle {
+    display: none;
+  }
+}
